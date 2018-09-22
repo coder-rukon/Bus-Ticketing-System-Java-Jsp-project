@@ -1,0 +1,223 @@
+@charset "ISO-8859-1";
+.header .header_content  {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	text-transform: uppercase;
+	background: #72B549;
+	color: #1D501D;
+	padding: 24px;
+}
+
+
+.rs_form_box label,
+.form_section_title,
+.color_light{
+	color:#336633;
+}
+.register_form {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	width: 800px;
+}
+.register_form .btn-default{
+	background: #336633;
+	color: #fff;
+	border-radius: 0;
+	padding: 5px 34px;
+	display: inline-block;
+	line-height: 34px;
+}
+.register_form .btn-default:hover{
+	background:#81B14D;
+}
+.rs_form_box {
+	display: block;
+	border: 1px solid #336633;
+	box-sizing: border-box;
+	padding: 20px;
+	position:relative;
+	margin: 40px 0 30px 0;
+}
+.rs_form_box+.rs_form_box{
+	margin-top: 15px;
+}
+.rs_form_box .form_section_title {
+	display: block;
+	margin: 0;
+	font-size: 20px;
+	font-weight: 600;
+	margin-bottom: 20px;
+	background: #ECF2E7;
+	position: absolute;
+	top: -14px;
+	left: 18px;
+	padding: 0 15px 0 5px;
+}
+.rs_form_box .input-group {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+.rs_form_box label {
+	display: block;
+	float: none;
+	font-size: 14px;
+	font-weight: 500;
+	margin: 0 0 7px 0;
+	padding: 0;
+}
+.rs_form_box .form-controller {
+	display: block;
+	width: 100%;
+	background: #F9F9F9;
+	border-top: 2px inset #222;
+	height: 36px;
+	margin-bottom: 10px;
+	padding: 0 0 0 8px;
+}
+.rs_form_box textarea.form-controller{
+	height: 260px;
+}
+body .btn-default{}
+body .btn-default:hover{}
+
+a.login_link {
+	display: block;
+	color: #000;
+	margin-top: 11px;
+	font-size: 17px;
+	text-align: left;
+	text-decoration: none;
+}
+.main_nav {
+	background: linear-gradient(0deg,#6FB245,#4A8D20,#6FB245),#6FB245;
+	margin: 20px 0 0 0;
+	border-radius: 10px 10px 0 0;
+	display: block;
+	overflow: hidden;
+	border-bottom: 7px solid #336633;
+}
+.main_nav ul{}
+.main_nav ul li{}
+.main_nav ul li a {
+	color: #000;
+	font-size: 18px;
+	padding: 9px 25px;
+	font-weight: 600;
+}
+.main_nav ul li a.active,
+.main_nav ul li a:hover{
+	background:#91C173 !important;
+}
+.main_contents_inner {
+	background: #ECF2E7;
+	border-radius: 0 0 10px 10px;
+	padding: 20px;
+}
+.dashboard{}
+.box {
+	display: block;
+	background: #fff;
+	border: 1px solid #5C993C;
+	margin: 0 0 30px 0;
+	box-sizing: border-box;
+	box-shadow: 0 3px 10px 2px rgba(0,0,0,.5);
+	border-radius: 5px;
+}
+.box .box_title {
+	display: block;
+	background: linear-gradient(0deg,#6BAE41,#56992C,#6BAE41);
+	color: #fff;
+	font-size: 19px;
+	margin: 0;
+	padding: 6px 20px;
+	display: block;
+}
+.box .table{}
+.box .table tr{}
+.box.successfully_purschase_ticket .table tr:first-child{
+	background: #CCCCC0;
+}
+.box .table tr td {
+	font-size: 15px;
+	font-size: 15px;
+	margin: 0;
+	padding: 5px;
+}
+.box .table tr td strong{}
+.dashboard{}
+.ticket_selecting_form{}
+.ticket_selecting_form .title {
+	background: #336633;
+	color: #fff;
+	font-size: 18px;
+	padding: 5px 15px;
+	margin: 0;
+	font-weight: 600;
+	margin-bottom: 5px;
+}
+.ticket_selecting_form .table{
+	width: 100%;
+}
+.ticket_selecting_form .table th {
+	background: #7BBD52;
+	color: #256700;
+	font-size: 16px;
+	font-weight: 600;
+	border: 2px solid #fff;
+}
+.ticket_selecting_form .table tr{
+
+}
+.ticket_selecting_form .table tr td{
+	background:#EAFFD5;
+	border: 2px solid #fff;
+}
+.ticket_selecting_form select{}
+.ticket_selecting_form .btn{}
+.ticket_selecting_form .btn:hover{}
+.dashboard{}
+.home_page_slider {
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
+.home_page_slider img{
+	width:
+}
+.home_page_slider .rs_single_slide {
+	display: block;
+	width: 100%;
+	height: 350px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home_page_slider .owl-nav {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	z-index: 2000;
+	right: 0;
+	margin-top:-50px;
+}
+.home_page_slider .owl-next,
+.home_page_slider .owl-prev {
+	color: #fff !important;
+	font-size: 80px !important;
+	line-height: 80px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	display: block;
+	float: left !important;
+}
+.home_page_slider .owl-next{
+	float: right !important;
+}
+
+.form_login{
+	width:auto;
+}
