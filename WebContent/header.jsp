@@ -1,10 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.digitalbd.Helper" %>
+<%@ page import="com.digitalbd.Helper,com.digitalbd.User" %>
 <%
 boolean isLogin = false;
 if(session.getAttribute("isUserLogin") != null)
 	isLogin = (boolean) session.getAttribute("isUserLogin");
+
 %>
 
 <!doctype html>
@@ -28,13 +29,31 @@ if(session.getAttribute("isUserLogin") != null)
   			</div>
   			<div class="main_nav">
   				<ul class="nav nav-pills pull-left">
-  					<% if(isLogin){ %>
-  					<li  class="nav-item"><a href="<%= Helper.baseUrl %>Dashboard.jsp" class="nav-link active">Dashboard</a></li>
-  					<li  class="nav-item"><a href="<%= Helper.baseUrl %>Purchase.jsp" class="nav-link">Purses Ticket</a></li>
-  					<li class="nav-item"><a href="<%= Helper.baseUrl %>Logout" class="nav-link">Logout</a></li>
-  					<% }else{ %>
-  					<li class="nav-item"><a href="<%= Helper.baseUrl %>Register.jsp" class="nav-link">Register</a></li>
-  					<li class="nav-item"><a href="<%= Helper.baseUrl %>Login.jsp" class="nav-link">Login</a></li>
+  					<% if(isLogin){ 
+  						String userId = (String) session.getAttribute("user_id");
+  						User user = new User(userId);
+  						if(user.rule.equals("admin")){
+  							%>
+  							<li  class="nav-item"><a href="" class="nav-link">Dashboard</a></li>
+							<li  class="nav-item"><a href="<%= Helper.baseUrl %>TrainList.jsp" class="nav-link">Trains</a></li>
+							<li  class="nav-item"><a href="<%= Helper.baseUrl %>StationList.jsp" class="nav-link">Stations</a></li>
+							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Destinations.jsp" class="nav-link">Destinations</a></li>
+							<li class="nav-item"><a href="<%= Helper.baseUrl %>Logout" class="nav-link">Logout</a></li>
+  							<%
+  						}
+  						else{
+  							%>
+  							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Dashboard.jsp" class="nav-link active">Dashboard</a></li>
+  							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Purchase.jsp" class="nav-link">Purses Ticket</a></li>
+  							<li class="nav-item"><a href="<%= Helper.baseUrl %>Logout" class="nav-link">Logout</a></li>
+  							
+  						<%
+  						}
+  					}
+  					else{
+  					%>
+  						<li class="nav-item"><a href="<%= Helper.baseUrl %>Register.jsp" class="nav-link">Register</a></li>
+  						<li class="nav-item"><a href="<%= Helper.baseUrl %>Login.jsp" class="nav-link">Login</a></li>
   					<% } %>
   				</ul>
   			</div>
@@ -43,5 +62,3 @@ if(session.getAttribute("isUserLogin") != null)
   	<section class="main_contents">
   		<div class="container">
   		<div class="main_contents_inner" >
-  		
-  		

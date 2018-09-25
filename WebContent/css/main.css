@@ -221,3 +221,6 @@ a.login_link {
 .form_login{
 	width:auto;
 }
+.table_des_seat .form-contoller{
+	width:70px;
+}
