@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.digitalbd.Helper,com.digitalbd.User" %>
+<%@ page import="com.digitalbd.Helper,com.digitalbd.*,java.sql.ResultSet,AllLayout.*" %>
 <%@ include file="header.jsp" %>
 <%
 String userId = null;
@@ -35,23 +35,39 @@ User user = new User(userId);
 		<h2 class="box_title">Successful Purchase Information</h2>
 		<table class="table table-bordered">
 			<tr>
-				<td>Bus Name</td>
+				<td>Train Name</td>
+				<td>Coach/Class</td>
 				<td>Purchase Date</td>
 				<td>Journey Date</td>
 				<td>Station From</td>
 				<td>Station To</td>
-				<td>eTicket Number</td>
-				<td>Number of Seats</td>
+				<td>Total Seat</td>
+				<td>Option</td>
 			</tr>
-			<tr>
-				<td>Tista</td>
-				<td>20/10/2018</td>
-				<td>20/10/2018</td>
-				<td>Dhaka</td>
-				<td>Jamalpur</td>
-				<td>4369</td>
-				<td>2</td>
-			</tr>
+			<%
+			Booking booking = new Booking();
+			ResultSet bookedTicket = booking.FindByUser(user.id);
+			while(bookedTicket.next()){
+				Destination tempDestination = new Destination(bookedTicket.getString("destination_id"));
+				trains trnTemp = new trains(tempDestination.train_id);
+				Station stationFromTemp = new Stations().getStation(tempDestination.station_from);
+				Station stationToTemp = new Stations().getStation(tempDestination.station_to);
+				%>
+				<tr>
+					<td><%= trnTemp.name %></td>
+					<td><%= trnTemp.type %></td>
+					<td><%= bookedTicket.getString("booking_date") %></td>
+					<td><%= bookedTicket.getString("journey_date") %></td>
+					<td><%= stationFromTemp.name %></td>
+					<td><%= stationToTemp.name %></td>
+					<td><%= bookedTicket.getString("number_of_seat") %></td>
+					<td><a class="btn btn-success btn-sm">Print</a></td>
+					
+				</tr>
+				<%
+			}
+			%>
+			
 		</table>
 	</div>
 </div>

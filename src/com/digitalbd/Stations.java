@@ -18,9 +18,30 @@ public class Stations implements DatabaseModel {
 		db = new Database();
 		this.tableName = "stations";
 	}
+	public Station getStation(String staionId) {
+		Station station = new Station();
+		String sqlQuery = "SELECT * FROM "+this.GetTableName()+" WHERE id='"+staionId+"'";
+		ResultSet result;
+		try {
+			result = this.db.statement.executeQuery(sqlQuery);
+			while(result.next()) {
+				station.name = result.getString("name").toString();
+				station.id = result.getString("id").toString();
+				station.address = result.getString("address").toString();
+				station.contact = result.getString("contact").toString();
+			}
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+		return station;
+	}
 	public ArrayList<Station> getAll() {
 		ArrayList<Station> stations = new ArrayList<Station>();
-		String sqlQuery = "SELECT * FROM " + this.GetTableName();
+		String sqlQuery = "SELECT * FROM " + this.GetTableName()+" ORDER BY name ASC";
 		try {
 			ResultSet result = db.statement.executeQuery(sqlQuery);
 			while(result.next()) {

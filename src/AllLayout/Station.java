@@ -3,7 +3,7 @@ package AllLayout;
 public class Station {
 	public String id, name, contact, address;
 	public Station() {
-		id = name = contact= address = "";
+		this.id = this.name = this.contact= this.address = "";
 	}
 	public Station(String argId, String argName, String argContact, String argAddress) {
 		this.id = argId;

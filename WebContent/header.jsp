@@ -43,7 +43,7 @@ if(session.getAttribute("isUserLogin") != null)
   						}
   						else{
   							%>
-  							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Dashboard.jsp" class="nav-link active">Dashboard</a></li>
+  							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Dashboard.jsp" class="nav-link">Dashboard</a></li>
   							<li  class="nav-item"><a href="<%= Helper.baseUrl %>Purchase.jsp" class="nav-link">Purses Ticket</a></li>
   							<li class="nav-item"><a href="<%= Helper.baseUrl %>Logout" class="nav-link">Logout</a></li>
   							

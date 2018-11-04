@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="com.digitalbd.Helper,com.digitalbd.User,com.digitalbd.trains" %>
+<%@ page import="com.digitalbd.Helper,com.digitalbd.User,com.digitalbd.trains,java.util.*" %>
 <%
 	String message = "";
 	if(request.getParameter("createTrain") != null){
 		trains trn = new trains();
 		trn.name = (String) request.getParameter("name");
 		trn.code = (String) request.getParameter("code");
+		trn.type = (String) request.getParameter("coach");
 		String totalSeat = (String) request.getParameter("totalseat");
 		trn.totalSeat = Integer.parseInt(totalSeat);
 		trn.Save();
@@ -38,6 +39,21 @@
 					<div class="input-group">
 						<label>Total Seat</label>
 						<input type="text" name="totalseat" class="form-controller">
+					</div>
+					<div class="input-group">
+						<div class="form-group">
+							<label>Class :</label>
+							<select class="form-control" name="coach" >
+							<%
+							HashMap<String,String> coach = Helper.TrainsCoach();
+							for(Map.Entry<String, String> temp:coach.entrySet()){
+								%>
+								<option value="<%= temp.getKey() %>"><%= temp.getValue() %></option>
+								<%
+							}
+							%>
+							</select>
+						</div>
 					</div>
 				</div>
 

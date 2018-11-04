@@ -10,7 +10,9 @@
 	padding: 24px;
 }
 
-
+.rs_shadow {
+	box-shadow: 0 0 5px rgba(0,0,0,.8);
+}
 .rs_form_box label,
 .form_section_title,
 .color_light{
@@ -152,12 +154,15 @@ a.login_link {
 .ticket_selecting_form{}
 .ticket_selecting_form .title {
 	background: #336633;
-	color: #fff;
+	color: #B8FB8F;
 	font-size: 18px;
 	padding: 5px 15px;
 	margin: 0;
 	font-weight: 600;
 	margin-bottom: 5px;
+}
+.ticket_selecting_form .title span{
+	color:#fff;
 }
 .ticket_selecting_form .table{
 	width: 100%;
@@ -223,4 +228,218 @@ a.login_link {
 }
 .table_des_seat .form-contoller{
 	width:70px;
+}
+.loading {
+	display: block;
+	width: 150px;
+	height: 150px;
+	background-image: url('../images/loader.gif');
+	margin: auto;
+	background-size: 122px;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+.ticket_info {
+	background: #EAFFD5;
+	padding: 2px;
+	box-sizing: border-box;
+	box-shadow: 0 0 12px rgba(0,0,0,.8);
+	overflow: hidden;
+	border-radius: 5px;
+	max-width: 900px;
+	margin: 20px auto;
+}
+.ticket_info h2 {
+	display: block;
+	text-align: center;
+	color: #EAFFD5;
+	background: #72B549;
+	border: 0;
+	border-radius: 5px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 8px 0;
+	margin: 0 0 10px 0;
+}
+.ticket_info .table {
+	border: 0 none !important;
+	margin: 0;
+	padding: 0;
+	box-shadow: none;
+}
+.ticket_info .table tr {
+	border: 0 none !important;
+	background: transparent;
+	box-shadow: none;
+}
+.ticket_info .table td {
+	border: 0;
+	padding: 0;
+}
+.ticket_info .table ul {
+	margin: 0;
+	padding: 15px;
+	list-style: none;
+	display: block;
+}
+.ticket_info .table ul li {
+	display: block;
+	font-size: 15px;
+	overflow: hidden;
+}
+.ticket_info .table ul li+li{
+	margin-top: 10px;
+}
+.ticket_info .table ul li strong {
+	min-width: 142px;
+	display: inline-block;
+	font-weight: 600;
+	overflow:hidden;
+	margin-right:5px;
+	float:left;
+}
+.ticket_info .table ul li strong:after{
+	content:"::";
+	float:right;
+}
+.ticket_info .table ul li span{
+	float:left;
+	display:block;
+}
+.ticket_info .rs_btn_sections {
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 30px 0 10px 0;
+}
+.ticket_info .rs_btn_sections a{}
+.ticket_print_section{}
+.single_ticket {
+	display: block;
+	border-radius: 10px;
+	width: 900px;
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	padding: 0;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.single_ticket .ticet_footer,
+.single_ticket .ticket_header {
+	display: block;
+	background: rgba(255,255,255,.2);
+	color: #fff;
+	padding: 15px 15px;
+	overflow: hidden;
+}
+.single_ticket .ticket_header h2 {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 28px;
+	font-family: "Vladimir Script";
+	font-weight: 400;
+	margin-left: 20px;
+}
+.single_ticket .ticket_header h2 strong{}
+.single_ticket .ticket_inner {
+	background: #fff;
+	padding: 15px;
+	display: block;
+	box-sizing: border-box;
+	color: #333;
+}
+.single_ticket .customer_part {
+	color: #333;
+	width: 75%;
+	float: left;
+}
+.single_ticket h4 {
+	margin: 0;
+	padding: 0;
+	display: block;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: normal;
+	color: #555;
+}
+.single_ticket h4 strong {
+	display: block;
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	margin-bottom: 3px;
+	font-weight: 500;
+	color: #000;
+}
+.single_ticket{}
+.single_ticket table {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+.single_ticket tr{}
+.single_ticket tr td {
+	vertical-align: top;
+}
+.single_ticket  strong {
+	display: block;
+	font-size: 14px;
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-weight: 600;
+	margin-bottom: 0;
+	line-height: 18px;
+}
+.single_ticket  span {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	color: #555;
+	font-size: 13px;
+	line-height: 17px;
+}
+.single_ticket  span + strong {
+	margin-top: 10px;
+}
+.single_ticket .qr_code {
+	width: 90px;
+	margin: 0;
+	padding: 0;
+	border: 0 none;
+	position: relative;
+	margin-top: -70px;
+}
+.single_ticket .ticet_footer {
+	text-align: center;
+	padding: 4px 15px;
+	font-size: 13px;
+}
+.single_ticket .ticet_footer  span{
+	color:#fff;
+}
+.wd_100px{
+	width:100px;
+}
+.text_center{
+	text-align: center;
+}
+.company_part:before {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 1px;
+	height: 1000%;
+	left: 10px;
+	top: -126px;
+	border-left: 2px dashed #FFAAE3;
+}
+.company_part {
+	display: block;
+	padding-left: 24px;
+	position: relative;
+	float: left;
 }
