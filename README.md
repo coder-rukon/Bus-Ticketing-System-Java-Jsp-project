@@ -5,7 +5,7 @@ https://youtu.be/3uQ0uITLEGg
 
 # Developed By : Md Rukon Shekh 
 # Language : Java,Jsp,HTML,CSS,Javascript,html,css,ajax,jquery,mysql
-# IDE : Eclipse
+# IDE : Eclipse Jee
 # Server: tomcat
 # Database : mysql
 
